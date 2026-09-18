@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #172041;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+}
+.wrapper__headerMenu {
+  position: absolute;
+  top: 50px;
+  width: 600px;
+  height: auto;
+  padding: 15px 30px;
+  border: 3px solid #5b6b85;
+  border-radius: 15px;
+}
+.wrapper__headerMenu p:nth-child(1),
+.wrapper__headerMenu p:nth-child(2),
+.wrapper__headerMenu p:nth-child(3) {
   color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.wrapper__headerGame {
+  position: absolute;
+  top: 50px;
+  width: 600px;
+  height: auto;
+  padding: 15px 30px;
+  border: 3px solid #5b6b85;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper__headerGame_title p:nth-child(1),
+.wrapper__headerGame_title p:nth-child(2),
+.wrapper__headerGame_title p:nth-child(3) {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.wrapper__headerGame_score {
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #fbfbfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper__headerGame_score p:nth-child(1) {
+  color: #283991;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.wrapper__headerGame_score p:nth-child(2) {
+  color: #565468;
+  font-size: 55px;
+  font-weight: bold;
+  margin-top: -15px;
+}
+.wrapper__rules {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+  padding: 10px;
+  border: 2px solid #8a8ea9;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.1s;
+  position: absolute;
+}
+.wrapper__rules:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+}
+.wrapper__rules:active {
+  transform: scale(0.97);
+  transition: all 0.1s;
+}
+.wrapper__modal {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(10, 16, 32, 0.5411764706);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper__modal_rulesBlock {
+  width: 350px;
+  height: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.wrapper__modal_rulesBlock_titleBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper__modal_rulesBlock_titleBlock_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #38405e;
+}
+.wrapper__modal_rulesBlock_titleBlock_close {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #cecfd4;
+  transition: all 0.1s;
+}
+.wrapper__modal_rulesBlock_titleBlock_close:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+}
+.wrapper__modal_rulesBlock_titleBlock_close:active {
+  transform: scale(0.97);
+  transition: all 0.1s;
+}
+.wrapper__modal_rulesBlock_rulesBox {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .wrapper__headerMenu, .wrapper__headerGame {
+    width: 95%;
   }
 }
+@media (max-width: 425px) {
+  .wrapper__headerMenu p:nth-child(1),
+  .wrapper__headerMenu p:nth-child(2),
+  .wrapper__headerMenu p:nth-child(3) {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .wrapper__headerGame {
+    width: 95%;
+  }
+  .wrapper__headerGame_title p:nth-child(1),
+  .wrapper__headerGame_title p:nth-child(2),
+  .wrapper__headerGame_title p:nth-child(3) {
+    font-size: 20px;
+  }
+  .wrapper__headerGame_score {
+    height: 90px;
+    width: 90px;
+  }
+  .wrapper__headerGame_score p:nth-child(1) {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .wrapper__headerGame_score p:nth-child(2) {
+    font-size: 40px;
+  }
+}
+@media (max-width: 375px) {
+  .wrapper__headerMenu p:nth-child(1),
+  .wrapper__headerMenu p:nth-child(2),
+  .wrapper__headerMenu p:nth-child(3) {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .wrapper__headerGame {
+    width: 95%;
+  }
+  .wrapper__headerGame_title p:nth-child(1),
+  .wrapper__headerGame_title p:nth-child(2),
+  .wrapper__headerGame_title p:nth-child(3) {
+    font-size: 18px;
+  }
+  .wrapper__headerGame_score p:nth-child(1) {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .wrapper__headerGame_score p:nth-child(2) {
+    font-size: 35px;
+  }
+  .wrapper__modal_rulesBlock {
+    margin: 0px 20px;
+    width: 320px;
+  }
+  .wrapper__modal_rulesBlock_rulesBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper__modal_rulesBlock_rulesBox img {
+    width: 250px;
+    height: 230px;
+  }
+}/*# sourceMappingURL=App.css.map */
