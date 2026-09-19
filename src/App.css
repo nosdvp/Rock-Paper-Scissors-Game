@@ -29,7 +29,48 @@
   font-weight: bold;
   font-size: 30px;
 }
-.wrapper__headerGame {
+.wrapper__modeForPlay {
+  width: 300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.wrapper__modeForPlay button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.wrapper__modeForPlay button:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+}
+.wrapper__modeForPlay button:active {
+  transform: scale(0.97);
+  transition: all 0.1s;
+}
+.wrapper__modeForPlay button {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+}
+.wrapper__modeForPlay button:nth-child(1) {
+  border: 3px solid #a01431;
+  color: #f72f57;
+  background-color: rgba(160, 20, 48, 0.3960784314);
+}
+.wrapper__modeForPlay button:nth-child(2) {
+  border: 3px solid #51bdd2;
+  color: #2aadd8;
+  background-color: rgba(46, 142, 174, 0.3921568627);
+}
+.wrapper__headerGameStandard, .wrapper__headerGameModern {
   position: absolute;
   top: 50px;
   width: 600px;
@@ -41,16 +82,18 @@
   align-items: center;
   justify-content: space-between;
 }
-.wrapper__headerGame_title p:nth-child(1),
-.wrapper__headerGame_title p:nth-child(2),
-.wrapper__headerGame_title p:nth-child(3) {
+.wrapper__headerGameStandard_title p:nth-child(1),
+.wrapper__headerGameStandard_title p:nth-child(2),
+.wrapper__headerGameStandard_title p:nth-child(3), .wrapper__headerGameModern_title p:nth-child(1),
+.wrapper__headerGameModern_title p:nth-child(2),
+.wrapper__headerGameModern_title p:nth-child(3) {
   color: white;
   font-weight: bold;
   font-size: 30px;
 }
-.wrapper__headerGame_score {
-  height: 120px;
-  width: 120px;
+.wrapper__headerGameStandard_score, .wrapper__headerGameModern_score {
+  height: 115px;
+  width: 115px;
   border-radius: 10px;
   background-color: #fbfbfb;
   display: flex;
@@ -58,18 +101,110 @@
   justify-content: center;
   flex-direction: column;
 }
-.wrapper__headerGame_score p:nth-child(1) {
+.wrapper__headerGameStandard_score p:nth-child(1), .wrapper__headerGameModern_score p:nth-child(1) {
   color: #283991;
   font-size: 15px;
   letter-spacing: 3px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.wrapper__headerGame_score p:nth-child(2) {
+.wrapper__headerGameStandard_score p:nth-child(2), .wrapper__headerGameModern_score p:nth-child(2) {
   color: #565468;
   font-size: 55px;
   font-weight: bold;
   margin-top: -15px;
+}
+.wrapper__headerGameStandard_choiseBlock, .wrapper__headerGameModern_choiseBlock {
+  width: 350px;
+  height: 300px;
+  margin-top: 120px;
+  position: relative;
+}
+.wrapper__headerGameStandard_choiseBlock_firstItem, .wrapper__headerGameModern_choiseBlock_firstItem {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 17px solid #5671f5;
+  border-radius: 50%;
+  outline: none;
+  background-color: #dfdfdf;
+}
+.wrapper__headerGameStandard_choiseBlock_firstItem:hover, .wrapper__headerGameModern_choiseBlock_firstItem:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+}
+.wrapper__headerGameStandard_choiseBlock_firstItem:active, .wrapper__headerGameModern_choiseBlock_firstItem:active {
+  transform: scale(0.97);
+  transition: all 0.1s;
+}
+.wrapper__headerGameStandard_choiseBlock_firstItem, .wrapper__headerGameModern_choiseBlock_firstItem {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 0px #2945c1;
+}
+.wrapper__headerGameStandard_choiseBlock_secondItem, .wrapper__headerGameModern_choiseBlock_secondItem {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 17px solid #efa319;
+  border-radius: 50%;
+  outline: none;
+  background-color: #dfdfdf;
+}
+.wrapper__headerGameStandard_choiseBlock_secondItem:hover, .wrapper__headerGameModern_choiseBlock_secondItem:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+}
+.wrapper__headerGameStandard_choiseBlock_secondItem:active, .wrapper__headerGameModern_choiseBlock_secondItem:active {
+  transform: scale(0.97);
+  transition: all 0.1s;
+}
+.wrapper__headerGameStandard_choiseBlock_secondItem, .wrapper__headerGameModern_choiseBlock_secondItem {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 0px #c56d1f;
+}
+.wrapper__headerGameStandard_choiseBlock_thirdItem, .wrapper__headerGameModern_choiseBlock_thirdItem {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  border: 17px solid #dd4260;
+  border-radius: 50%;
+  outline: none;
+  background-color: #dfdfdf;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 0px #a01737;
+}
+.wrapper__headerGameStandard_choiseBlock_thirdItem:hover, .wrapper__headerGameModern_choiseBlock_thirdItem:hover {
+  transform: translateX(-50%) scale(1.03);
+  transition: all 0.1s;
+}
+.wrapper__headerGameStandard_choiseBlock_thirdItem:active, .wrapper__headerGameModern_choiseBlock_thirdItem:active {
+  transform: translateX(-50%) scale(0.98);
+  transition: all 0.1s;
+}
+.wrapper__headerGameModern_title p:nth-child(1),
+.wrapper__headerGameModern_title p:nth-child(2),
+.wrapper__headerGameModern_title p:nth-child(3),
+.wrapper__headerGameModern_title p:nth-child(4),
+.wrapper__headerGameModern_title p:nth-child(5) {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
 }
 .wrapper__rules {
   position: absolute;
@@ -104,6 +239,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
 }
 .wrapper__modal_rulesBlock {
   width: 350px;
@@ -147,7 +283,7 @@
 }
 
 @media (max-width: 768px) {
-  .wrapper__headerMenu, .wrapper__headerGame {
+  .wrapper__headerMenu, .wrapper__headerGameStandard, .wrapper__headerGameModern {
     width: 95%;
   }
 }
@@ -159,23 +295,38 @@
     font-weight: bold;
     font-size: 20px;
   }
-  .wrapper__headerGame {
-    width: 95%;
-  }
-  .wrapper__headerGame_title p:nth-child(1),
-  .wrapper__headerGame_title p:nth-child(2),
-  .wrapper__headerGame_title p:nth-child(3) {
+  .wrapper__headerGameStandard_title p:nth-child(1),
+  .wrapper__headerGameStandard_title p:nth-child(2),
+  .wrapper__headerGameStandard_title p:nth-child(3) {
     font-size: 20px;
   }
-  .wrapper__headerGame_score {
+  .wrapper__headerGameStandard_score {
     height: 90px;
     width: 90px;
   }
-  .wrapper__headerGame_score p:nth-child(1) {
+  .wrapper__headerGameStandard_score p:nth-child(1) {
     font-size: 13px;
     margin-bottom: 10px;
   }
-  .wrapper__headerGame_score p:nth-child(2) {
+  .wrapper__headerGameStandard_score p:nth-child(2) {
+    font-size: 40px;
+  }
+  .wrapper__headerGameModern_title p:nth-child(1),
+  .wrapper__headerGameModern_title p:nth-child(2),
+  .wrapper__headerGameModern_title p:nth-child(3),
+  .wrapper__headerGameModern_title p:nth-child(4),
+  .wrapper__headerGameModern_title p:nth-child(5) {
+    font-size: 15px;
+  }
+  .wrapper__headerGameModern_score {
+    height: 90px;
+    width: 90px;
+  }
+  .wrapper__headerGameModern_score p:nth-child(1) {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .wrapper__headerGameModern_score p:nth-child(2) {
     font-size: 40px;
   }
 }
@@ -187,19 +338,19 @@
     font-weight: bold;
     font-size: 18px;
   }
-  .wrapper__headerGame {
+  .wrapper__headerGameStandard {
     width: 95%;
   }
-  .wrapper__headerGame_title p:nth-child(1),
-  .wrapper__headerGame_title p:nth-child(2),
-  .wrapper__headerGame_title p:nth-child(3) {
+  .wrapper__headerGameStandard_title p:nth-child(1),
+  .wrapper__headerGameStandard_title p:nth-child(2),
+  .wrapper__headerGameStandard_title p:nth-child(3) {
     font-size: 18px;
   }
-  .wrapper__headerGame_score p:nth-child(1) {
+  .wrapper__headerGameStandard_score p:nth-child(1) {
     font-size: 12px;
     margin-bottom: 10px;
   }
-  .wrapper__headerGame_score p:nth-child(2) {
+  .wrapper__headerGameStandard_score p:nth-child(2) {
     font-size: 35px;
   }
   .wrapper__modal_rulesBlock {
