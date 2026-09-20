@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { use, useState } from 'react';
 import './App.css';
 import rules from './img/image-rules.svg'
 import paper from './img/icon-paper.svg'
@@ -12,6 +12,63 @@ function App() {
   const [mode, setMode] = useState('')
   const [count, setCount] = useState(0)
   const [userItem, setUserItem] = useState('')
+  const [visibleUserItem, setVisibleUserItem] = useState('')
+  const [IMG, setIMG] = useState()
+  const [CPUItem, setCPUItem] = useState('')
+  const [visibleCPUItem, setVisibleCPUItem] = useState()
+  const [CPUImg, setCPUImg] = useState()
+
+  const playGame = (userItem) => {
+    setUserItem(userItem)
+
+    if(userItem === 'paper'){
+      setIMG(paper)
+    }else if(userItem === 'scissors'){
+      setIMG(scissors)
+    }else if(userItem === 'rock'){
+      setIMG(rock)
+    }
+
+    const userClasses = {
+      paper: 'wrapper__headerGameStandard_blockResult_userItemBlock_userPaper',
+      scissors: 'wrapper__headerGameStandard_blockResult_userItemBlock_userScissors',
+      rock: 'wrapper__headerGameStandard_blockResult_userItemBlock_userRock'
+    }
+
+    const cpuClasses = {
+      paper: 'wrapper__headerGameStandard_blockResult_CPUItemBlock_CPUPaper',
+      scissors: 'wrapper__headerGameStandard_blockResult_CPUItemBlock_CPUScissors',
+      rock: 'wrapper__headerGameStandard_blockResult_CPUItemBlock_CPURock'
+    }
+
+    setVisibleUserItem(userClasses[userItem])
+
+    const itemForGame = ['paper', 'scissors', 'rock']
+    const CPUCoiseItem = itemForGame[Math.floor(Math.random() * itemForGame.length)]
+    setCPUItem(CPUCoiseItem)
+
+    setVisibleCPUItem(cpuClasses[CPUCoiseItem])
+
+    if(CPUCoiseItem === 'paper'){
+      setCPUImg(paper)
+    }else if(CPUCoiseItem === 'scissors'){
+      setCPUImg(scissors)
+    }else if(CPUCoiseItem === 'rock'){
+      setCPUImg(rock)
+    }
+
+    if(userItem === 'paper' && CPUCoiseItem === 'rock'){
+      setCount(prev => prev + 1)
+    }else if(userItem === 'rock' && CPUCoiseItem === 'scissors'){
+      setCount(prev => prev + 1)
+    }else if(userItem === 'scissors' && CPUCoiseItem === 'paper'){
+      setCount(prev => prev + 1)
+    }
+  }
+
+  const restart = () => {
+    setUserItem('')
+  }
 
   return (
     <div className='wrapper'>
@@ -49,26 +106,48 @@ function App() {
             </div>
           </div>
 
-          <div className='wrapper__headerGameStandard_choiseBlock'>
+          {userItem === '' ? (
+            <div className='wrapper__headerGameStandard_choiseBlock'>
             <button 
               className='wrapper__headerGameStandard_choiseBlock_firstItem' 
-              onClick={() => setUserItem('paper')}
+              onClick={() => playGame('paper')}
             >
               <img src={paper}/>
             </button>
             <button 
               className='wrapper__headerGameStandard_choiseBlock_secondItem' 
-              onClick={() => setUserItem('scissors')}
+              onClick={() => playGame('scissors')}
               >
                 <img src={scissors}/>
             </button>
             <button 
               className='wrapper__headerGameStandard_choiseBlock_thirdItem' 
-              onClick={() => setUserItem('rock')}
+              onClick={() => playGame('rock')}
             >
               <img src={rock}/>
             </button>
           </div>
+          ) : (
+              <div className='wrapper__headerGameStandard_blockResult'>
+
+                <div className='wrapper__headerGameStandard_blockResult_userItemBlock'>
+                  <p>YOU PICKED</p>
+                  <div className={visibleUserItem}>
+                    <img src={IMG}/>
+                  </div>
+                </div>
+
+                <div className='wrapper__headerGameStandard_blockResult_CPUItemBlock'>
+                  <p>THE HOUSE PICKED</p>
+                  <div className={visibleCPUItem}>
+                    <img src={CPUImg}/>
+                  </div>
+                </div>
+
+                
+                <button className='restart' onClick={() => restart()}>Restart</button>
+              </div>
+          )}
         </>
       ) : menu === false && mode === 'modern' ? (
         <div className='wrapper__headerGameModern'>
@@ -85,7 +164,6 @@ function App() {
             </div>
           </div>
       ) : null}
-
 
       <button className='wrapper__rules' onClick={() => setOpenModalRules(true)}>RULES</button>
 
