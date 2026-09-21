@@ -10,7 +10,9 @@ function App() {
   const [openModalRules, setOpenModalRules] = useState(false)
   const [menu, setMenu] = useState(true)
   const [mode, setMode] = useState('')
-  const [count, setCount] = useState(0)
+  const [userScore, setUserScore] = useState(0)
+  const [ties, setTies] = useState(0)
+  const [CPUScore, setCPUScore] = useState(0)
   const [userItem, setUserItem] = useState('')
   const [visibleUserItem, setVisibleUserItem] = useState('')
   const [IMG, setIMG] = useState()
@@ -44,31 +46,35 @@ function App() {
     setVisibleUserItem(userClasses[userItem])
 
     const itemForGame = ['paper', 'scissors', 'rock']
-    const CPUCoiseItem = itemForGame[Math.floor(Math.random() * itemForGame.length)]
-    setCPUItem(CPUCoiseItem)
+    const CPUChoiseItem = itemForGame[Math.floor(Math.random() * itemForGame.length)]
+    setCPUItem(CPUChoiseItem)
 
-    setVisibleCPUItem(cpuClasses[CPUCoiseItem])
+    setVisibleCPUItem(cpuClasses[CPUChoiseItem])
 
-    if(CPUCoiseItem === 'paper'){
+    if(CPUChoiseItem === 'paper'){
       setCPUImg(paper)
-    }else if(CPUCoiseItem === 'scissors'){
+    }else if(CPUChoiseItem === 'scissors'){
       setCPUImg(scissors)
-    }else if(CPUCoiseItem === 'rock'){
+    }else if(CPUChoiseItem === 'rock'){
       setCPUImg(rock)
     }
 
-    if(userItem === 'paper' && CPUCoiseItem === 'rock'){
-      setCount(prev => prev + 1)
-    }else if(userItem === 'rock' && CPUCoiseItem === 'scissors'){
-      setCount(prev => prev + 1)
-    }else if(userItem === 'scissors' && CPUCoiseItem === 'paper'){
-      setCount(prev => prev + 1)
-    }
+    if(userItem === 'paper' && CPUChoiseItem === 'rock'){
+      setUserScore(prev => prev + 1)
+    }else if(userItem === 'rock' && CPUChoiseItem === 'scissors'){
+      setUserScore(prev => prev + 1)
+    }else if(userItem === 'scissors' && CPUChoiseItem === 'paper'){
+      setUserScore(prev => prev + 1)
+    }else if(userItem === CPUChoiseItem){
+      setTies(prev => prev + 1)
+    }else if(userItem === 'paper' && CPUChoiseItem === 'scissors'){
+      setCPUScore(prev => prev + 1)
+    }else if(userItem === 'rock' && CPUChoiseItem === 'paper'){
+      setCPUScore(prev => prev + 1)
+    }else if(userItem === 'scissors' && CPUChoiseItem === 'rock'){
+      setCPUScore(prev => prev + 1)
   }
-
-  const restart = () => {
-    setUserItem('')
-  }
+}
 
   return (
     <div className='wrapper'>
@@ -102,7 +108,9 @@ function App() {
             </div>
             <div className='wrapper__headerGameStandard_score'>
               <p>SCORE</p>
-              <p>{count}</p>
+              <p>You Win: {userScore}</p>
+              <p>Ties: {ties}</p>
+              <p>CPU Win: {CPUScore}</p>
             </div>
           </div>
 
@@ -145,7 +153,7 @@ function App() {
                 </div>
 
                 
-                <button className='restart' onClick={() => restart()}>Restart</button>
+                <button className='restart' onClick={() => setUserItem('')}>Restart</button>
               </div>
           )}
         </>
@@ -160,11 +168,19 @@ function App() {
             </div>
             <div className='wrapper__headerGameModern_score'>
               <p>SCORE</p>
-              <p>{count}</p>
+              <p>You Win: {userScore}</p>
+              <p>Ties: {ties}</p>
+              <p>CPU Win: {CPUScore}</p>
             </div>
           </div>
       ) : null}
 
+      <button className='wrapper__backToMenu' onClick={() => {
+        setMenu(true)
+        setUserScore(0)
+        setTies(0)
+        setCPUScore(0)
+      }}>HOME</button>
       <button className='wrapper__rules' onClick={() => setOpenModalRules(true)}>RULES</button>
 
       {openModalRules === true && (
