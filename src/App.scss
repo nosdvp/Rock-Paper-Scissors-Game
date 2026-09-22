@@ -274,6 +274,11 @@
       }
     }
     &__headerGameModern{
+      &_choiseBlockModern{
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+      }
       &_title{
         p:nth-child(1),
         p:nth-child(2),
@@ -362,6 +367,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        &_imgModern{
+          width: 320px;
+          height: 320px;
+        }
       }
     }
   }
@@ -389,6 +398,65 @@
   &:active{
     transform: translate(-50%) scale(0.97);
     transition: all 0.1s;
+  }
+}
+
+.modalGoHome{
+  width: 100%;
+  height: 100vh;
+  background-color: #0a10208a;
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__block{
+    width: 300px;
+    height: 300px;
+    background-color: #172041;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px #4ebbd0,
+                0px -5px 10px #4ebbd0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p{
+      text-align: center;
+      width: 100%;
+      font-size: 25px;
+      color: white;
+      font-weight: bold;
+      height: 100px;
+    }
+    &_navBlock{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        button:nth-child(1),
+        button:nth-child(2){
+          width: 75px;
+          height: 35px;
+          outline: none;
+          cursor: pointer;
+          @include animButton();
+          border-radius: 5px;
+          font-size: 15px;
+          font-weight: bold;
+        }
+        button:nth-child(1){
+          background-color: rgba(74, 108, 22, 0.732);
+          border: 3px solid greenyellow;
+          color: white;
+        }
+        button:nth-child(2){
+          background-color: rgba(148, 17, 0, 0.574);
+          border: 3px solid rgb(255, 0, 0);
+          color: white;
+        }
+      }
   }
 }
 

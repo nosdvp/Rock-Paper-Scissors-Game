@@ -287,6 +287,11 @@
   border: 20px solid #dd4260;
   box-shadow: 0px 8px 0px #a01737;
 }
+.wrapper__headerGameModern_choiseBlockModern {
+  width: 500px;
+  height: 500px;
+  border: 1px solid red;
+}
 .wrapper__headerGameModern_title p:nth-child(1),
 .wrapper__headerGameModern_title p:nth-child(2),
 .wrapper__headerGameModern_title p:nth-child(3),
@@ -396,6 +401,10 @@
   align-items: center;
   justify-content: center;
 }
+.wrapper__modal_rulesBlock_rulesBox_imgModern {
+  width: 320px;
+  height: 320px;
+}
 
 .restart {
   position: absolute;
@@ -420,6 +429,76 @@
 .restart:active {
   transform: translate(-50%) scale(0.97);
   transition: all 0.1s;
+}
+
+.modalGoHome {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(10, 16, 32, 0.5411764706);
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modalGoHome__block {
+  width: 300px;
+  height: 300px;
+  background-color: #172041;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px #4ebbd0, 0px -5px 10px #4ebbd0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modalGoHome__block p {
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  height: 100px;
+}
+.modalGoHome__block_navBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.modalGoHome__block_navBlock button:nth-child(1),
+.modalGoHome__block_navBlock button:nth-child(2) {
+  width: 75px;
+  height: 35px;
+  outline: none;
+  cursor: pointer;
+}
+.modalGoHome__block_navBlock button:nth-child(1):hover,
+.modalGoHome__block_navBlock button:nth-child(2):hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+}
+.modalGoHome__block_navBlock button:nth-child(1):active,
+.modalGoHome__block_navBlock button:nth-child(2):active {
+  transform: scale(0.97);
+  transition: all 0.1s;
+}
+.modalGoHome__block_navBlock button:nth-child(1),
+.modalGoHome__block_navBlock button:nth-child(2) {
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.modalGoHome__block_navBlock button:nth-child(1) {
+  background-color: rgba(74, 108, 22, 0.732);
+  border: 3px solid greenyellow;
+  color: white;
+}
+.modalGoHome__block_navBlock button:nth-child(2) {
+  background-color: rgba(148, 17, 0, 0.574);
+  border: 3px solid rgb(255, 0, 0);
+  color: white;
 }
 
 @media (max-width: 768px) {
