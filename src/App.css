@@ -374,6 +374,93 @@
   width: 40px;
   height: 50px;
 }
+.wrapper__headerGameModern_blockResultModern {
+  width: 550px;
+  height: 400px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper__headerGameModern_blockResultModern_userItemBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper__headerGameModern_blockResultModern_userItemBlock p {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.wrapper__headerGameModern_blockResultModern_userItemBlock_userPaper, .wrapper__headerGameModern_blockResultModern_userItemBlock_userScissors, .wrapper__headerGameModern_blockResultModern_userItemBlock_userRock {
+  width: 200px;
+  height: 200px;
+  border: 20px solid #5671f5;
+  border-radius: 50%;
+  outline: none;
+  background-color: #dfdfdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 8px 0px #2945c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper__headerGameModern_blockResultModern_userItemBlock_userPaper img, .wrapper__headerGameModern_blockResultModern_userItemBlock_userScissors img, .wrapper__headerGameModern_blockResultModern_userItemBlock_userRock img {
+  width: 80px;
+  height: 80px;
+}
+.wrapper__headerGameModern_blockResultModern_userItemBlock_userScissors {
+  border: 20px solid #efa319;
+  box-shadow: 0px 8px 0px #c56d1f;
+}
+.wrapper__headerGameModern_blockResultModern_userItemBlock_userRock {
+  border: 20px solid #dd4260;
+  box-shadow: 0px 8px 0px #a01737;
+}
+.wrapper__headerGameModern_blockResultModern_CPUItemBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper__headerGameModern_blockResultModern_CPUItemBlock p {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUPaper, .wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUScissors, .wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPURock {
+  width: 200px;
+  height: 200px;
+  border: 20px solid #5671f5;
+  border-radius: 50%;
+  outline: none;
+  background-color: #dfdfdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 8px 0px #2945c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUPaper img, .wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUScissors img, .wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPURock img {
+  width: 80px;
+  height: 80px;
+}
+.wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUScissors {
+  border: 20px solid #efa319;
+  box-shadow: 0px 8px 0px #c56d1f;
+}
+.wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPURock {
+  border: 20px solid #dd4260;
+  box-shadow: 0px 8px 0px #a01737;
+}
 .wrapper__rules {
   position: absolute;
   bottom: 20px;
@@ -602,6 +689,53 @@
   .wrapper__backToMenu:active {
     transform: scale(0.97);
     transition: all 0.1s;
+  }
+  .wrapper__headerGameModern_title p:nth-child(1),
+  .wrapper__headerGameModern_title p:nth-child(2),
+  .wrapper__headerGameModern_title p:nth-child(3),
+  .wrapper__headerGameModern_title p:nth-child(4),
+  .wrapper__headerGameModern_title p:nth-child(5) {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .wrapper__headerGameModern_choiseBlockModern {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    margin-top: 100px;
+  }
+  .wrapper__headerGameModern_choiseBlockModern_firstItemModern, .wrapper__headerGameModern_choiseBlockModern_secondItemModern, .wrapper__headerGameModern_choiseBlockModern_thirdItemModern, .wrapper__headerGameModern_choiseBlockModern_fourthItemModern, .wrapper__headerGameModern_choiseBlockModern_fifthItemModern {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 50%;
+    border: 8px solid #efa319;
+    box-shadow: 0px 3px 0px #c56d1f;
+  }
+  .wrapper__headerGameModern_choiseBlockModern_secondItemModern {
+    top: 90px;
+    left: 25%;
+    border: 8px solid #50bdd2;
+    box-shadow: 0px 3px 0px #2c8fab;
+  }
+  .wrapper__headerGameModern_choiseBlockModern_thirdItemModern {
+    top: 90px;
+    left: 73%;
+    border: 8px solid #5771f4;
+    box-shadow: 0px 3px 0px #2847c1;
+  }
+  .wrapper__headerGameModern_choiseBlockModern_fourthItemModern {
+    top: 220px;
+    left: 33%;
+    border: 8px solid #8d5de6;
+    box-shadow: 0px 3px 0px #6036ab;
+  }
+  .wrapper__headerGameModern_choiseBlockModern_fifthItemModern {
+    top: 220px;
+    left: 63%;
+    border: 8px solid #de3958;
+    box-shadow: 0px 3px 0px #9d1632;
   }
 }
 @media (max-width: 425px) {
