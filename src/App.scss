@@ -274,11 +274,6 @@
       }
     }
     &__headerGameModern{
-      &_choiseBlockModern{
-        width: 500px;
-        height: 500px;
-        border: 1px solid red;
-      }
       &_title{
         p:nth-child(1),
         p:nth-child(2),
@@ -289,8 +284,90 @@
           font-weight: bold;
           font-size: 20px;
         }
+      }
+      &_choiseBlockModern{
+        width: 500px;
+        height: 400px;
+        margin-top: 130px;
+        position: relative;
+        margin-top: 200px;
+        &_firstItemModern,
+        &_secondItemModern,
+        &_thirdItemModern,
+        &_fourthItemModern,
+        &_fifthItemModern{
+          width: 120px;
+          height: 120px;
+          position: absolute;
+          top: 15px;
+          left: 50%;
+          border: 13px solid #efa319;
+          border-radius: 50%;
+          outline: none;
+          background-color: #dfdfdf;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0px 5px 0px #c56d1f;
+          transform: translate(-50%);
+          transition: all 0.1s;
+          img{
+            width: 40px;
+            height: 50px;
+          }
+          &:hover{
+            transform: translate(-50%) scale(1.02);
+            transition: all 0.1s;
+          }
+          &:active{
+            transform: translate(-50%) scale(0.97);
+            transition: all 0.1s;
+          }
+        }
+        &_secondItemModern{
+          top: 110px;
+          left: 25%;
+          border: 13px solid #50bdd2;
+          box-shadow: 0px 5px 0px #2c8fab;
+          img{
+            width: 40px;
+            height: 50px;
+            margin-left: 7px;
+          }
+        }
+        &_thirdItemModern{
+          top: 110px;
+          left: 73%;
+          border: 13px solid #5771f4;
+          box-shadow: 0px 5px 0px #2847c1;
+          img{
+            width: 40px;
+            height: 50px;
+          }
+        }
+        &_fourthItemModern{
+          top: 250px;
+          left: 33%;
+          border: 13px solid #8d5de6;
+          box-shadow: 0px 5px 0px #6036ab;
+          img{
+            width: 40px;
+            height: 50px;
+          }
+        }
+        &_fifthItemModern{
+          top: 250px;
+          left: 63%;
+          border: 13px solid #de3958;
+          box-shadow: 0px 5px 0px #9d1632;
+          img{
+            width: 40px;
+            height: 50px;
+          }
+        }
+      }
     }
-  }
     &__rules{
       position: absolute;
       bottom: 20px;
@@ -574,11 +651,74 @@
         height: 90px;
         width: 90px;
         p:nth-child(1){
-          font-size: 13px;
-          margin-bottom: 10px;
+          font-size: 14px;
         }
-        p:nth-child(2){
-          font-size: 40px;
+        p:nth-child(2),
+        p:nth-child(3),
+        p:nth-child(4){
+          color: #565468;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+      &_choiseBlockModern{
+        width: 95%;
+        height: 300px;
+        margin-top: 100px;
+        top: -15px;
+        &_firstItemModern,
+        &_secondItemModern,
+        &_thirdItemModern,
+        &_fourthItemModern,
+        &_fifthItemModern{
+          width: 100px;
+          height: 100px;
+          border: 8px solid #efa319;
+          box-shadow: 0px 3px 0px #c56d1f;
+          img{
+            width: 30px;
+            height: 40px;
+          }
+        }
+        &_secondItemModern{
+          top: 100px;
+          left: 26%;
+          border: 8px solid #50bdd2;
+          box-shadow: 0px 3px 0px #2c8fab;
+          img{
+            width: 30px;
+            height: 40px;
+          }
+        }
+        &_thirdItemModern{
+          top: 100px;
+          left: 73%;
+          border: 8px solid #5771f4;
+          box-shadow: 0px 3px 0px #2847c1;
+          img{
+            width: 30px;
+            height: 40px;
+          }
+        }
+        &_fourthItemModern{
+          top: 220px;
+          left: 33%;
+          border: 8px solid #8d5de6;
+          box-shadow: 0px 3px 0px #6036ab;
+          img{
+            width: 30px;
+            height: 40px;
+          }
+        }
+        &_fifthItemModern{
+          top: 220px;
+          left: 63%;
+          border: 8px solid #de3958;
+          box-shadow: 0px 3px 0px #9d1632;
+          img{
+            width: 30px;
+            height: 40px;
+          }
         }
       }
     }
@@ -696,6 +836,69 @@
           &_CPURock{
             border: 13px solid #dd4260;
             box-shadow: 0px 5px 0px #a01737;
+          }
+        }
+      }
+    }
+    &__headerGameModern{
+      &_title{
+        p:nth-child(1),
+        p:nth-child(2),
+        p:nth-child(3),
+        p:nth-child(4),
+        p:nth-child(5){
+          font-size: 15px;
+        }
+      }
+      &_score{
+        height: 90px;
+        width: 90px;
+        p:nth-child(1){
+          font-size: 14px;
+        }
+        p:nth-child(2),
+        p:nth-child(3),
+        p:nth-child(4){
+          color: #565468;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+      &_choiseBlockModern{
+        &_firstItemModern,
+        &_secondItemModern,
+        &_thirdItemModern,
+        &_fourthItemModern,
+        &_fifthItemModern{
+          img{
+          }
+        }
+        &_secondItemModern{
+          top: 100px;
+          left: 20%;
+        }
+        &_thirdItemModern{
+          top: 100px;
+          left: 80%;
+        }
+        &_fourthItemModern{
+          top: 220px;
+          left: 30%;
+          border: 8px solid #8d5de6;
+          box-shadow: 0px 3px 0px #6036ab;
+          img{
+            width: 30px;
+            height: 40px;
+          }
+        }
+        &_fifthItemModern{
+          top: 220px;
+          left: 68%;
+          border: 8px solid #de3958;
+          box-shadow: 0px 3px 0px #9d1632;
+          img{
+            width: 30px;
+            height: 40px;
           }
         }
       }

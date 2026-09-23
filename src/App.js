@@ -182,40 +182,40 @@ function App() {
             <div className='wrapper__headerGameModern_choiseBlockModern'>
 
               <button 
-                className='wrapper__headerGameModern_choiseBlock_firstItemModern' 
+                className='wrapper__headerGameModern_choiseBlockModern_firstItemModern' 
+                onClick={() => playGame('scissors')}
+              >
+                <img src={scissors}/>
+              </button>
+
+              <button 
+                className='wrapper__headerGameModern_choiseBlockModern_secondItemModern' 
+                onClick={() => playGame('spock')}
+                >
+                  <img src={spock}/>
+              </button>
+
+              <button 
+                className='wrapper__headerGameModern_choiseBlockModern_thirdItemModern' 
                 onClick={() => playGame('paper')}
               >
                 <img src={paper}/>
               </button>
 
               <button 
-                className='wrapper__headerGameModern_choiseBlock_firstItemModern' 
-                onClick={() => playGame('scissors')}
-                >
-                  <img src={scissors}/>
-              </button>
-
-              <button 
-                className='wrapper__headerGameModern_choiseBlock_firstItemModern' 
-                onClick={() => playGame('rock')}
-              >
-                <img src={rock}/>
-              </button>
-
-              <button 
-                className='wrapper__headerGameModern_choiseBlock_firstItemModern' 
+                className='wrapper__headerGameModern_choiseBlockModern_fourthItemModern' 
                 onClick={() => playGame('lizard')}
               >
                 <img src={lizard}/>
               </button>
 
               <button 
-                className='wrapper__headerGameModern_choiseBlock_firstItemModern' 
-                onClick={() => playGame('spock')}
+                className='wrapper__headerGameModern_choiseBlockModern_fifthItemModern' 
+                onClick={() => playGame('rock')}
               >
-                <img src={spock}/>
-
+                <img src={rock}/>
               </button>
+
             </div>
           ) : (
             <>
