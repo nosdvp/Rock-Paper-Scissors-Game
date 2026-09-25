@@ -34,9 +34,9 @@ function App() {
   const [CPUIMGModern, setCPUIMGModern] = useState()
   const [visibleUserItemModern, setVisibleUserItemModern] = useState()
   const [visibleCPUItemModern, setVisibleCPUItemModern] = useState()
-  const [userScoreModern, setUserScoreModern] = useState()
-  const [tiesModern, setTiesModern] = useState()
-  const [CPUScoreModern, setCPUScoreModern] = useState()
+  const [userScoreModern, setUserScoreModern] = useState(0)
+  const [tiesModern, setTiesModern] = useState(0)
+  const [CPUScoreModern, setCPUScoreModern] = useState(0)
 
   const playGameStandard = (userItem) => {
     setUserItem(userItem)
@@ -110,19 +110,19 @@ function App() {
     }
 
     const userClassesModern = {
-      paper: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_userPaperModerm',
+      paper: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_userPaperModern',
       scissors: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern',
       rock: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern',
-      lizard: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_userPaperModern',
-      spock: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern',
+      lizard: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern',
+      spock: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern',
     }
 
     const cpuClassesModern = {
-      paper: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_CPUItemBlockModern',
-      scissors: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_CPUItemBlockModern',
-      rock: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_CPUItemBlockModern',
-      lizard: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_CPUItemBlockModern',
-      spock: 'wrapper__headerGameModern_blockResultModern_userItemBlockModern_CPUItemBlockModern',
+      paper: 'wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUPaperModern',
+      scissors: 'wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern',
+      rock: 'wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern',
+      lizard: 'wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern',
+      spock: 'wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern',
     }
 
     setVisibleUserItemModern(userClassesModern[userItemModern])
@@ -146,25 +146,45 @@ function App() {
 
     if(userItemModern === 'paper' && CPUChoiseItem === 'rock'){
       setUserScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'paper' && CPUChoiseItem === 'spock'){
+      setUserScoreModern(prev => prev + 1)
     }else if(userItemModern === 'rock' && CPUChoiseItem === 'lizard'){
+      setUserScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'rock' && CPUChoiseItem === 'scissors'){
       setUserScoreModern(prev => prev + 1)
     }else if(userItemModern === 'lizard' && CPUChoiseItem === 'spock'){
       setUserScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'lizard' && CPUChoiseItem === 'paper'){
+      setUserScoreModern(prev => prev + 1)
     }else if(userItemModern === 'spock' && CPUChoiseItem === 'scissors'){
       setUserScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'spock' && CPUChoiseItem === 'rock'){
+      setUserScoreModern(prev => prev + 1)
     }else if(userItemModern === 'scissors' && CPUChoiseItem === 'paper'){
+      setUserScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'scissors' && CPUChoiseItem === 'lizard'){
       setUserScoreModern(prev => prev + 1)
     }else if(userItemModern === CPUChoiseItem){
       setTiesModern(prev => prev + 1)
     }else if(userItemModern === 'rock' && CPUChoiseItem === 'paper'){
       setCPUScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'rock' && CPUChoiseItem === 'spock'){
+      setCPUScoreModern(prev => prev + 1)
     }else if(userItemModern === 'lizard' && CPUChoiseItem === 'rock'){
+      setCPUScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'lizard' && CPUChoiseItem === 'scissors'){
       setCPUScoreModern(prev => prev + 1)
     }else if(userItemModern === 'spock' && CPUChoiseItem === 'lizard'){
       setCPUScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'spock' && CPUChoiseItem === 'paper'){
+      setCPUScoreModern(prev => prev + 1)
     }else if(userItemModern === 'scissors' && CPUChoiseItem === 'spock'){
       setCPUScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'scissors' && CPUChoiseItem === 'rock'){
+      setCPUScoreModern(prev => prev + 1)
     }else if(userItemModern === 'paper' && CPUChoiseItem === 'scissors'){
+      setCPUScoreModern(prev => prev + 1)
+    }else if(userItemModern === 'paper' && CPUChoiseItem === 'lizard'){
       setCPUScoreModern(prev => prev + 1)
     }
   }
@@ -319,7 +339,7 @@ function App() {
                     <img src={CPUIMGModern}/>
                   </div>
                 </div>
-                <button className='restart' onClick={() => setUserItem('')}>Restart</button>
+                <button className='restart' onClick={() => setUserItemModern('')}>Restart</button>
               </div>
           )}
         </>
@@ -348,7 +368,21 @@ function App() {
 
       {menu === false && (
         <>
-          <button className='wrapper__backToMenu' onClick={() => setModalBeforeGoToMenu(true)}>HOME</button>
+          <button className='wrapper__backToMenu' onClick={() => {
+            if(mode === 'standard'){
+              if(userScore === 0 && ties === 0 && CPUScore === 0){
+                setMenu(true)
+              }else if(userScore !== 0 || ties !== 0 || CPUScore !== 0){
+                setModalBeforeGoToMenu(true)
+              }
+            }else if(mode === 'modern'){
+              if(userScoreModern === 0 && tiesModern === 0 && CPUScoreModern === 0){
+                setMenu(true)
+              }else if(userScoreModern === 0 || tiesModern === 0 || CPUScoreModern === 0){
+                setModalBeforeGoToMenu(true)
+              }
+            }
+          }}>HOME</button>
           <button className='wrapper__rules' onClick={() => {
             if(mode === 'standard'){
               setOpenModalRulesStandard(true)

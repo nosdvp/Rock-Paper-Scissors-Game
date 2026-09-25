@@ -375,7 +375,7 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-content: space-between;
-        &_userItemBlock{
+        &_userItemBlockModern{
           display: flex;
           align-items: center;
           justify-content: center;
@@ -386,9 +386,11 @@
             font-size: 20px;
             margin-bottom: 30px;
           }
-          &_userPaper,
-          &_userScissors,
-          &_userRock{
+          &_userPaperModern,
+          &_userScissorsModern,
+          &_userRockModern,
+          &_userLizardModern,
+          &_userSpockModern{
             width: 200px;
             height: 200px;
             border: 20px solid #5671f5;
@@ -407,16 +409,29 @@
               height: 80px;
             }
           }
-          &_userScissors{
+          &_userScissorsModern{
             border: 20px solid #efa319;
             box-shadow: 0px 8px 0px #c56d1f;
           }
-          &_userRock{
+          &_userRockModern{
             border: 20px solid #dd4260;
             box-shadow: 0px 8px 0px #a01737;
+          }
+          &_userLizardModern{
+            border: 20px solid #8d5de6;
+            box-shadow: 0px 8px 0px #6036ab;
+          }
+          &_userSpockModern{
+            border: 20px solid #50bdd2;
+            box-shadow: 0px 8px 0px #2c8fab;
+            img{
+              width: 60px;
+              height: 70px;
+              margin-left: 10px;
+            }
           }
         }
-        &_CPUItemBlock{
+        &_CPUItemBlockModern{
           display: flex;
           align-items: center;
           justify-content: center;
@@ -427,9 +442,11 @@
             font-size: 20px;
             margin-bottom: 30px;
           }
-          &_CPUPaper,
-          &_CPUScissors,
-          &_CPURock{
+          &_CPUPaperModern,
+          &_CPUScissorsModern,
+          &_CPURockModern,
+          &_CPULizardModern,
+          &_CPUSpockModern{
             width: 200px;
             height: 200px;
             border: 20px solid #5671f5;
@@ -448,13 +465,21 @@
               height: 80px;
             }
           }
-          &_CPUScissors{
+          &_CPUScissorsModern{
             border: 20px solid #efa319;
             box-shadow: 0px 8px 0px #c56d1f;
           }
-          &_CPURock{
+          &_CPURockModern{
             border: 20px solid #dd4260;
             box-shadow: 0px 8px 0px #a01737;
+          }
+          &_CPULizardModern{
+            border: 20px solid #8d5de6;
+            box-shadow: 0px 8px 0px #6036ab;
+          }
+          &_CPUSpockModern{
+            border: 20px solid #50bdd2;
+            box-shadow: 0px 8px 0px #2c8fab;
           }
         }
       }
@@ -867,6 +892,84 @@
           }
         }
       }
+      &_blockResultModern{
+        width: 550px;
+        height: 400px;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: space-between;
+        &_userItemBlockModern{
+          &_userPaperModern,
+          &_userScissorsModern,
+          &_userRockModern,
+          &_userLizardModern,
+          &_userSpockModern{
+            width: 150px;
+            height: 150px;
+            border: 15px solid #5671f5;
+            box-shadow: 0px 5px 0px #2945c1;
+            img{
+              width: 50px;
+              height: 50px;
+            }
+          }
+          &_userScissorsModern{
+            border: 15px solid #efa319;
+            box-shadow: 0px 5px 0px #c56d1f;
+          }
+          &_userRockModern{
+            border: 15px solid #dd4260;
+            box-shadow: 0px 5px 0px #a01737;
+          }
+          &_userLizardModern{
+            border: 15px solid #8d5de6;
+            box-shadow: 0px 5px 0px #6036ab;
+          }
+          &_userSpockModern{
+            border: 15px solid #50bdd2;
+            box-shadow: 0px 5px 0px #2c8fab;
+            img{
+              width: 40px;
+              height: 50px;
+              margin-left: 10px;
+            }
+          }
+        }
+        &_CPUItemBlockModern{
+          &_CPUPaperModern,
+          &_CPUScissorsModern,
+          &_CPURockModern,
+          &_CPULizardModern,
+          &_CPUSpockModern{
+            width: 150px;
+            height: 150px;
+            border: 15px solid #5671f5;
+            box-shadow: 0px 5px 0px #2945c1;
+            img{
+              width: 50px;
+              height: 50px;
+            }
+          }
+          &_CPUScissorsModern{
+            border: 15px solid #efa319;
+            box-shadow: 0px 5px 0px #c56d1f;
+          }
+          &_CPURockModern{
+            border: 15px solid #dd4260;
+            box-shadow: 0px 5px 0px #a01737;
+          }
+          &_CPULizardModern{
+            border: 15px solid #8d5de6;
+            box-shadow: 0px 5px 0px #6036ab;
+          }
+          &_CPUSpockModern{
+            border: 15px solid #50bdd2;
+            box-shadow: 0px 5px 0px #2c8fab;
+          }
+        }
+      }
     }
   }
 }
@@ -935,7 +1038,7 @@
           p{
             color: white;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 13px;
             margin-bottom: 30px;
           }
           &_userPaper,
@@ -943,7 +1046,7 @@
           &_userRock{
             width: 120px;
             height: 120px;
-            border: 13px solid #5671f5;
+            border: 10px solid #5671f5;
             box-shadow: 0px 5px 0px #2945c1;
             img{
               width: 40px;
@@ -951,24 +1054,24 @@
             }
           }
           &_userScissors{
-            border: 13px solid #efa319;
+            border: 10px solid #efa319;
             box-shadow: 0px 5px 0px #c56d1f;
           }
           &_userRock{
-            border: 13px solid #dd4260;
+            border: 10px solid #dd4260;
             box-shadow: 0px 5px 0px #a01737;
           }
         }
         &_CPUItemBlock{
           p{
-            font-size: 12px;
+            font-size: 13px;
           }
           &_CPUPaper,
           &_CPUScissors,
           &_CPURock{
             width: 120px;
             height: 120px;
-            border: 13px solid #5671f5;
+            border: 10px solid #5671f5;
             box-shadow: 0px 5px 0px #2945c1;
             img{
               width: 40px;
@@ -976,11 +1079,11 @@
             }
           }
           &_CPUScissors{
-            border: 13px solid #efa319;
+            border: 10px solid #efa319;
             box-shadow: 0px 5px 0px #c56d1f;
           }
           &_CPURock{
-            border: 13px solid #dd4260;
+            border: 10px solid #dd4260;
             box-shadow: 0px 5px 0px #a01737;
           }
         }
@@ -1045,6 +1148,90 @@
           img{
             width: 30px;
             height: 40px;
+          }
+        }
+      }
+      &_blockResultModern{
+        width: 550px;
+        height: 400px;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: space-between;
+        &_userItemBlockModern{
+          p{
+            font-size: 14px;
+          }
+          &_userPaperModern,
+          &_userScissorsModern,
+          &_userRockModern,
+          &_userLizardModern,
+          &_userSpockModern{
+            width: 120px;
+            height: 120px;
+            border: 10px solid #5671f5;
+            box-shadow: 0px 5px 0px #2945c1;
+            img{
+              width: 50px;
+              height: 50px;
+            }
+          }
+          &_userScissorsModern{
+            border: 10px solid #efa319;
+            box-shadow: 0px 5px 0px #c56d1f;
+          }
+          &_userRockModern{
+            border: 10px solid #dd4260;
+            box-shadow: 0px 5px 0px #a01737;
+          }
+          &_userLizardModern{
+            border: 10px solid #8d5de6;
+            box-shadow: 0px 5px 0px #6036ab;
+          }
+          &_userSpockModern{
+            border: 10px solid #50bdd2;
+            box-shadow: 0px 5px 0px #2c8fab;
+            img{
+              width: 40px;
+              height: 50px;
+              margin-left: 10px;
+            }
+          }
+        }
+        &_CPUItemBlockModern{
+          p{
+            font-size: 14px;
+          }
+          &_CPUPaperModern,
+          &_CPUScissorsModern,
+          &_CPURockModern,
+          &_CPULizardModern,
+          &_CPUSpockModern{
+            width: 120px;
+            height: 120px;
+            border: 10px solid #5671f5;
+            box-shadow: 0px 5px 0px #2945c1;
+            img{
+              width: 50px;
+              height: 50px;
+            }
+          }
+          &_CPUScissorsModern{
+            border: 10px solid #efa319;
+            box-shadow: 0px 5px 0px #c56d1f;
+          }
+          &_CPURockModern{
+            border: 10px solid #dd4260;
+            box-shadow: 0px 5px 0px #a01737;
+          }
+          &_CPULizardModern{
+            border: 10px solid #8d5de6;
+            box-shadow: 0px 5px 0px #6036ab;
+          }
+          &_CPUSpockModern{
+            border: 10px solid #50bdd2;
+            box-shadow: 0px 5px 0px #2c8fab;
           }
         }
       }

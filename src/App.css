@@ -383,19 +383,19 @@
   align-items: center;
   justify-content: space-between;
 }
-.wrapper__headerGameModern_blockResultModern_userItemBlock {
+.wrapper__headerGameModern_blockResultModern_userItemBlockModern {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.wrapper__headerGameModern_blockResultModern_userItemBlock p {
+.wrapper__headerGameModern_blockResultModern_userItemBlockModern p {
   color: white;
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 30px;
 }
-.wrapper__headerGameModern_blockResultModern_userItemBlock_userPaper, .wrapper__headerGameModern_blockResultModern_userItemBlock_userScissors, .wrapper__headerGameModern_blockResultModern_userItemBlock_userRock {
+.wrapper__headerGameModern_blockResultModern_userItemBlockModern_userPaperModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern {
   width: 200px;
   height: 200px;
   border: 20px solid #5671f5;
@@ -410,31 +410,44 @@
   align-items: center;
   justify-content: center;
 }
-.wrapper__headerGameModern_blockResultModern_userItemBlock_userPaper img, .wrapper__headerGameModern_blockResultModern_userItemBlock_userScissors img, .wrapper__headerGameModern_blockResultModern_userItemBlock_userRock img {
+.wrapper__headerGameModern_blockResultModern_userItemBlockModern_userPaperModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern img {
   width: 80px;
   height: 80px;
 }
-.wrapper__headerGameModern_blockResultModern_userItemBlock_userScissors {
+.wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern {
   border: 20px solid #efa319;
   box-shadow: 0px 8px 0px #c56d1f;
 }
-.wrapper__headerGameModern_blockResultModern_userItemBlock_userRock {
+.wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern {
   border: 20px solid #dd4260;
   box-shadow: 0px 8px 0px #a01737;
 }
-.wrapper__headerGameModern_blockResultModern_CPUItemBlock {
+.wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern {
+  border: 20px solid #8d5de6;
+  box-shadow: 0px 8px 0px #6036ab;
+}
+.wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern {
+  border: 20px solid #50bdd2;
+  box-shadow: 0px 8px 0px #2c8fab;
+}
+.wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern img {
+  width: 60px;
+  height: 70px;
+  margin-left: 10px;
+}
+.wrapper__headerGameModern_blockResultModern_CPUItemBlockModern {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.wrapper__headerGameModern_blockResultModern_CPUItemBlock p {
+.wrapper__headerGameModern_blockResultModern_CPUItemBlockModern p {
   color: white;
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 30px;
 }
-.wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUPaper, .wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUScissors, .wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPURock {
+.wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUPaperModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern {
   width: 200px;
   height: 200px;
   border: 20px solid #5671f5;
@@ -449,17 +462,25 @@
   align-items: center;
   justify-content: center;
 }
-.wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUPaper img, .wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUScissors img, .wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPURock img {
+.wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUPaperModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern img {
   width: 80px;
   height: 80px;
 }
-.wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPUScissors {
+.wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern {
   border: 20px solid #efa319;
   box-shadow: 0px 8px 0px #c56d1f;
 }
-.wrapper__headerGameModern_blockResultModern_CPUItemBlock_CPURock {
+.wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern {
   border: 20px solid #dd4260;
   box-shadow: 0px 8px 0px #a01737;
+}
+.wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern {
+  border: 20px solid #8d5de6;
+  box-shadow: 0px 8px 0px #6036ab;
+}
+.wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern {
+  border: 20px solid #50bdd2;
+  box-shadow: 0px 8px 0px #2c8fab;
 }
 .wrapper__rules {
   position: absolute;
@@ -872,6 +893,72 @@
     width: 30px;
     height: 40px;
   }
+  .wrapper__headerGameModern_blockResultModern {
+    width: 550px;
+    height: 400px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userPaperModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern {
+    width: 150px;
+    height: 150px;
+    border: 15px solid #5671f5;
+    box-shadow: 0px 5px 0px #2945c1;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userPaperModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern img {
+    width: 50px;
+    height: 50px;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern {
+    border: 15px solid #efa319;
+    box-shadow: 0px 5px 0px #c56d1f;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern {
+    border: 15px solid #dd4260;
+    box-shadow: 0px 5px 0px #a01737;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern {
+    border: 15px solid #8d5de6;
+    box-shadow: 0px 5px 0px #6036ab;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern {
+    border: 15px solid #50bdd2;
+    box-shadow: 0px 5px 0px #2c8fab;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern img {
+    width: 40px;
+    height: 50px;
+    margin-left: 10px;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUPaperModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern {
+    width: 150px;
+    height: 150px;
+    border: 15px solid #5671f5;
+    box-shadow: 0px 5px 0px #2945c1;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUPaperModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern img {
+    width: 50px;
+    height: 50px;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern {
+    border: 15px solid #efa319;
+    box-shadow: 0px 5px 0px #c56d1f;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern {
+    border: 15px solid #dd4260;
+    box-shadow: 0px 5px 0px #a01737;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern {
+    border: 15px solid #8d5de6;
+    box-shadow: 0px 5px 0px #6036ab;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern {
+    border: 15px solid #50bdd2;
+    box-shadow: 0px 5px 0px #2c8fab;
+  }
 }
 @media (max-width: 375px) {
   .wrapper__headerMenu p:nth-child(1),
@@ -933,13 +1020,13 @@
   .wrapper__headerGameStandard_blockResult_userItemBlock p {
     color: white;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 30px;
   }
   .wrapper__headerGameStandard_blockResult_userItemBlock_userPaper, .wrapper__headerGameStandard_blockResult_userItemBlock_userScissors, .wrapper__headerGameStandard_blockResult_userItemBlock_userRock {
     width: 120px;
     height: 120px;
-    border: 13px solid #5671f5;
+    border: 10px solid #5671f5;
     box-shadow: 0px 5px 0px #2945c1;
   }
   .wrapper__headerGameStandard_blockResult_userItemBlock_userPaper img, .wrapper__headerGameStandard_blockResult_userItemBlock_userScissors img, .wrapper__headerGameStandard_blockResult_userItemBlock_userRock img {
@@ -947,20 +1034,20 @@
     height: 40px;
   }
   .wrapper__headerGameStandard_blockResult_userItemBlock_userScissors {
-    border: 13px solid #efa319;
+    border: 10px solid #efa319;
     box-shadow: 0px 5px 0px #c56d1f;
   }
   .wrapper__headerGameStandard_blockResult_userItemBlock_userRock {
-    border: 13px solid #dd4260;
+    border: 10px solid #dd4260;
     box-shadow: 0px 5px 0px #a01737;
   }
   .wrapper__headerGameStandard_blockResult_CPUItemBlock p {
-    font-size: 12px;
+    font-size: 13px;
   }
   .wrapper__headerGameStandard_blockResult_CPUItemBlock_CPUPaper, .wrapper__headerGameStandard_blockResult_CPUItemBlock_CPUScissors, .wrapper__headerGameStandard_blockResult_CPUItemBlock_CPURock {
     width: 120px;
     height: 120px;
-    border: 13px solid #5671f5;
+    border: 10px solid #5671f5;
     box-shadow: 0px 5px 0px #2945c1;
   }
   .wrapper__headerGameStandard_blockResult_CPUItemBlock_CPUPaper img, .wrapper__headerGameStandard_blockResult_CPUItemBlock_CPUScissors img, .wrapper__headerGameStandard_blockResult_CPUItemBlock_CPURock img {
@@ -968,11 +1055,11 @@
     height: 40px;
   }
   .wrapper__headerGameStandard_blockResult_CPUItemBlock_CPUScissors {
-    border: 13px solid #efa319;
+    border: 10px solid #efa319;
     box-shadow: 0px 5px 0px #c56d1f;
   }
   .wrapper__headerGameStandard_blockResult_CPUItemBlock_CPURock {
-    border: 13px solid #dd4260;
+    border: 10px solid #dd4260;
     box-shadow: 0px 5px 0px #a01737;
   }
   .wrapper__headerGameModern_title p:nth-child(1),
@@ -1023,6 +1110,78 @@
   .wrapper__headerGameModern_choiseBlockModern_fifthItemModern img {
     width: 30px;
     height: 40px;
+  }
+  .wrapper__headerGameModern_blockResultModern {
+    width: 550px;
+    height: 400px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern p {
+    font-size: 14px;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userPaperModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern {
+    width: 120px;
+    height: 120px;
+    border: 10px solid #5671f5;
+    box-shadow: 0px 5px 0px #2945c1;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userPaperModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern img, .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern img {
+    width: 50px;
+    height: 50px;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userScissorsModern {
+    border: 10px solid #efa319;
+    box-shadow: 0px 5px 0px #c56d1f;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userRockModern {
+    border: 10px solid #dd4260;
+    box-shadow: 0px 5px 0px #a01737;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userLizardModern {
+    border: 10px solid #8d5de6;
+    box-shadow: 0px 5px 0px #6036ab;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern {
+    border: 10px solid #50bdd2;
+    box-shadow: 0px 5px 0px #2c8fab;
+  }
+  .wrapper__headerGameModern_blockResultModern_userItemBlockModern_userSpockModern img {
+    width: 40px;
+    height: 50px;
+    margin-left: 10px;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern p {
+    font-size: 14px;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUPaperModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern {
+    width: 120px;
+    height: 120px;
+    border: 10px solid #5671f5;
+    box-shadow: 0px 5px 0px #2945c1;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUPaperModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern img, .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern img {
+    width: 50px;
+    height: 50px;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUScissorsModern {
+    border: 10px solid #efa319;
+    box-shadow: 0px 5px 0px #c56d1f;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPURockModern {
+    border: 10px solid #dd4260;
+    box-shadow: 0px 5px 0px #a01737;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPULizardModern {
+    border: 10px solid #8d5de6;
+    box-shadow: 0px 5px 0px #6036ab;
+  }
+  .wrapper__headerGameModern_blockResultModern_CPUItemBlockModern_CPUSpockModern {
+    border: 10px solid #50bdd2;
+    box-shadow: 0px 5px 0px #2c8fab;
   }
   .wrapper__modal_rulesBlock {
     margin: 0px 20px;
